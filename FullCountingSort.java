@@ -27,24 +27,13 @@ public class Solution
             {
             arr[i][j]=sc.next();
             }
-        }
-        for(int i=0;i<n/2;i++)
-        {
-            for(int j=1;j<2;j++)
+            if(i<n/2)
             {
-                arr[i][j]="-";
+                arr[i][1]="-";
             }
-        }
-        for(int i=0;i<n;i++)
-        {
             x[i]=Integer.parseInt(arr[i][0]);
         }
-        int temp;
         int c[]=new int[100];
-        for(int i=0;i<100;i++)
-        {
-            c[i]=0;
-        }
         for(int i=0;i<n;i++)
         {
             if(x[i]>=0 && x[i]<100)
