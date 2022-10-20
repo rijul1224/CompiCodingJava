@@ -33,43 +33,16 @@ public class Solution
             }
             x[i]=Integer.parseInt(arr[i][0]);
         }
-        int c[]=new int[100];
-        for(int i=0;i<n;i++)
-        {
-            if(x[i]>=0 && x[i]<100)
-            {
-                for(int j=0;j<100;j++)
-                {
-                if(x[i]==j)
-                {  
-                    c[j]=c[j]+1;
-                    break;
-                }
-                }
-                }
-        }
         for(int i=0;i<100;i++)
         {
-            for(int j=0;j<c[i];j++)
+            for(int k=0;k<n;k++)
             {
-                for(int k=0;k<n;k++)
+                if(x[k]==i)
                 {
-                    if(x[k]==i)
-                    {
-                        s[i][j]=arr[k][1];
-                        j++;
-                    }
+                    System.out.print(arr[k][1]+" ");
                 }
-                
             }
         }
-            for(int i=0;i<100;i++)
-            {
-                for(int j=0;j<c[i];j++)
-                {
-                System.out.print(s[i][j]+" ");
-                }
-            }
     }
 }
 }
